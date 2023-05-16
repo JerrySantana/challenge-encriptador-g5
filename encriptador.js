@@ -1,4 +1,4 @@
-/* Programa creado por Gerardo Santana */
+/* Created by Gerardo Santana */
 function encryptText() {
     let originalText = document.getElementById("originalText").value;
     if(originalText.length === 0) {
@@ -55,7 +55,57 @@ function encryptText() {
 }
 
 function decryptText() {
+    let encryptedText = document.getElementById("originalText").value;
+    if(encryptedText.length === 0) {
+        document.getElementById("resultText").placeholder = "Ingresa un texto válido...";
+    } else {
+        document.getElementById("resultText").style.backgroundImage = "none";
+        let ignorePreviousDecrypt = [];
+        let decryptedText = "";
 
+        const decryptions = [
+            {encrypt: "enter", replaceFor: "e"},
+            {encrypt: "ober", replaceFor: "o"},
+            {encrypt: "ufat", replaceFor: "u"},
+            {encrypt: "imes", replaceFor: "i"},
+            {encrypt: "ai", replaceFor: "a"},
+        ];
+
+        for (let i = 0; i < encryptedText.length; i++) {
+            let currentChar = encryptedText.charAt(i);
+            let ignoreCurrentChar = false;
+
+            for (let j = 0; j < ignorePreviousDecrypt.length; j++) {
+                let ignoreDecrypt = ignorePreviousDecrypt[j];
+
+                if (i >= ignoreDecrypt.start && i < ignoreDecrypt.end) {
+                    decryptedText += currentChar;
+                    ignoreCurrentChar = true;
+                    break;
+                }
+            }
+
+            if (!ignoreCurrentChar) {
+                let foundDecrypt = decryptions.find(
+                    (decrypt) => decrypt.replaceFor === currentChar
+                );
+
+                if (foundDecrypt) {
+                    let encryptLength = foundDecrypt.encrypt.length;
+                    let start = i;
+                    let end = i + encryptLength;
+
+                    ignorePreviousDecrypt.push({start, end});
+                    decryptedText += foundDecrypt.replaceFor;
+                    i += encryptLength - 1;
+                } else {
+                    decryptedText += currentChar;
+                }
+            }
+        }
+        document.getElementById("resultText").value = decryptedText;
+        document.getElementById("copyButton").style.display = "";
+    }
 }
 
 function copyToClipboard() {
