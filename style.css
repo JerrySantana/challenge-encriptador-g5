@@ -17,45 +17,45 @@ Works on Chrome, Edge, and Safari*/
     border-radius: 20px;
     border: 3px solid rgba(242, 253, 220, 0.75);
 }
-
+/* Page body layout */
 body {
     width: 99.7%;
     background: #454b4b;
     color: #a8942c;
 }
-
+/* Header layout */
 header {
     display: flex;
     flex-direction: row;
     width: 90%;
     margin: 0 4% 0 4%;
 }
-
+/* Alura Logo layout */
 #logoAlura {
     margin: 2% 0 2% 6%;
     width: 3rem;
     height: 4rem;
 }
-
+/* header image layout */
 #tituloEncriptador {
     width: 70%;
     align-self: center;
     margin: 0 0 2% 5%;
 }
-
+/* Page main layout */
 main {
     width: 90%;
     margin: 0 4% 0 4%;
     background: url("images/animacionMorse.png") center repeat-y;
     background-size: 90%;
 }
-
+/* Encrypt/Decrypt text boxes layout */
 .textContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-
+/* Encrypt Text text box configuration */
 #originalText {
     width: 18em;
     height: 15em;
@@ -70,12 +70,12 @@ main {
     font-size: 2rem;
     font-weight: lighter;
 }
-
+/* Encrypt Text text box placeholder layout */
 #originalText::placeholder {
     color: #7172a9;
     font-size: xx-large;
 }
-
+/* Decrypt Text text box configuration */
 #resultText {
     resize: none;
     border: solid #8278cd;
@@ -90,20 +90,20 @@ main {
     padding: 1em;
     margin: 0 2% 0 2%;
 }
-
+/* Decrypt Text text box placeholder layout */
 #resultText::placeholder {
     color: #c0ef6c;
     text-align: center;
     font-size: xx-large;
     padding-top: 20%;
 }
-
+/* Buttons layout */
 .buttonContainer {
     display: flex;
     flex-wrap: wrap-reverse;
     justify-content: space-evenly;
 }
-
+/* Buttons configuration */
 .buttonContainer button {
     position: relative;
     padding: 2em;
@@ -121,62 +121,62 @@ main {
     text-align: center;
     border: none;
 }
-
+/* Encrypt Button configuration */
 #encryptButton {
     background: rgb(72, 136, 136);
     cursor: pointer;
 }
-
+/* Encrypt Button hover configuration */
 #encryptButton:hover {
     background: rgb(112, 155, 155);
     cursor: pointer;
 }
-
+/* Encrypt Button active configuration */
 #encryptButton:active {
     background: #c4f8f8;
     cursor: pointer;
 }
-
+/* Decrypt Button configuration */
 #decryptButton {
     background: #008080;
     cursor: pointer;
 }
-
+/* Decrypt Button hover configuration */
 #decryptButton:hover {
     background: #33b7b7;
     cursor: pointer;
 }
-
+/* Decrypt Button active configuration */
 #decryptButton:active {
     background: #8ec9c9;
     cursor: pointer;
 }
-
+/* Copy Button configuration */
 #copyButton {
     background: rgb(43, 103, 103);
     cursor: pointer;
 }
-
+/* Copy Button hover configuration */
 #copyButton:hover {
     background: rgb(30, 110, 110);
     cursor: pointer;
 }
-
+/* Copy Button active configuration */
 #copyButton:active {
     background: rgb(10, 87, 87);
     cursor: pointer;
 }
-
+/* Footer configuration */
 footer {
     background: rgba(112, 113, 167, 0.49);
     text-align: center;
     font-size: 2rem;
 }
-
+/* Footer image layout */
 #footerAluraChallenge {
     width: 70%;
 }
-
+/* Footer text layout */
 #acercaAnimaciones {
     text-align: center;
     color: rgba(170, 170, 170, 0.52);
