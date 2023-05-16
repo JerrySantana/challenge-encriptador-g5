@@ -111,6 +111,7 @@ main {
     padding: 2em;
     width: 20em;
     height: 5em;
+    border-color: transparent;
     border-radius: 2em;
     margin: 2% 0 2% 0;
     transition: background 1s;
@@ -121,7 +122,10 @@ main {
     font-size: 20px;
     line-height: 20px;
     text-align: center;
-    border: none;
+    outline-color: transparent;
+}
+.buttonContainer button:is(:hover, :focus) {
+    box-shadow: 0 0 3px 3px #7071a7;
 }
 /* Encrypt Button configuration */
 #encryptButton {
