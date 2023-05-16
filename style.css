@@ -68,12 +68,13 @@ main {
     color: #7071a7;
     outline: none;
     font-size: 2rem;
-    font-weight: lighter;
+    font-weight: bold;
 }
 /* Encrypt Text text box placeholder layout */
 #originalText::placeholder {
     color: #7172a9;
     font-size: xx-large;
+    font-weight: bold;
 }
 /* Decrypt Text text box configuration */
 #resultText {
@@ -84,7 +85,7 @@ main {
     background: rgba(142, 129, 218, 0.63) url("images/muñeco.png") no-repeat center;
     outline: none;
     font-size: x-large;
-    font-weight: lighter;
+    font-weight: bold;
     width: 30em;
     height: 40em;
     padding: 1em;
@@ -96,6 +97,7 @@ main {
     text-align: center;
     font-size: xx-large;
     padding-top: 20%;
+    font-weight: bold;
 }
 /* Buttons layout */
 .buttonContainer {
