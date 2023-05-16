@@ -3,4 +3,4 @@ Challenge Enriptador Oracle ONE Next Education Grupo 5. <br>
 Creado por Gerardo Santana. <br>
 
 ![captura.png](images/capturaImagen.png)
-<img src="images/capturaGIF.gif" style="align-self: center">
+![GIF.gif](images/capturaGIF.gif)
