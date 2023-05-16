@@ -109,5 +109,12 @@ function decryptText() {
 }
 
 function copyToClipboard() {
-
+    document.getElementById("copyButton").style.display = "none";
+    let copiedText = document.getElementById("resultText").value;
+    if (copiedText.length !== 0) {
+        document.getElementById("resultText").value = "";
+        document.getElementById("resultText").placeholder = "Sin texto para mostrar...";
+        document.getElementById("resultText").style.backgroundImage = "";
+        navigator.clipboard.writeText(copiedText);
+    }
 }
